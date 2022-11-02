@@ -1,0 +1,418 @@
+/* common css start */
+:root{
+    --primaryColor: #02918b;
+    --secondaryColor: white;
+    --thirdColor: #cfc91d;
+    --formColor: #0a0a0b;
+    --userinputColor: #7e8287;
+}
+body.darkmode{
+    --primaryColor: #02918b;
+    --secondaryColor: #111;
+    --thirdColor: #cfc91d;
+    --formColor: #fff;
+    --userinputColor: #7e8287;
+}
+body{
+    background: var(--secondaryColor);
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+.container{
+    width:1170px;
+    margin:auto;
+}
+
+ul{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.section_info{
+    text-align: center;
+    color:var(--userinputColor);
+
+}
+.section_info h2{
+   color: var(--primaryColor);
+    font-size: 46px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+.section_info p b{
+    font-size: 23px;
+}
+
+/* common css ends */
+
+/* Nav part start */
+nav .row{
+    
+    align-items: center;
+}
+nav .logo{
+    width:20%;
+}
+nav .menu{
+    width:80%;
+}
+nav ul{
+    display:flex;
+    justify-content: flex-end;
+}
+nav{
+    background-color: #02918b;
+}
+
+nav .menu ul li a{
+    display: inline-block;
+    
+    font-size: 12px;
+    font-weight: 800;
+    transition: 0.4s;
+    color:var(--secondaryColor);
+    padding:26px 25px;
+    text-transform: uppercase;
+}
+
+nav .menu ul li a:hover{
+    background-color: #E8D200;
+    color:black
+}
+#sideMenu{
+    width: 200px;
+    height: 100%;
+    background-color: var(--thirdColor);
+    position: fixed;
+    top: 60px;
+    left: 0;
+    z-index: 99999999;
+    margin-left: -200px;
+    transition: .5s;
+    overflow-y: auto;
+}
+#sideMenu.active{
+    margin-left: 0;
+    animation: sidemenu_ani 1s;
+}
+@keyframes sidemenu_ani {
+    from{
+        left:-200px;
+    }   
+    to{
+        left: 0px;
+    } 
+}
+
+
+#sideMenu ul li a{
+    display: inline-block;
+    width: 100%;
+    color: var(--secondaryColor);
+    background-color: var(--primaryColor);
+    font-size: 12px;
+    font-weight: 800;
+    text-transform: uppercase;
+    padding: 10px;
+    transition: .6s;
+}
+#sideMenu ul li a:hover{
+    color: var(--primaryColor);
+    background-color: var(--thirdColor);
+    /* border-radius: 10px; */
+}
+
+/* nav part ends */
+
+/* Banner part starts */
+#banner{
+    height:728px;
+    background-image:url(../img/MYFOLIO_banner.jpg);
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    z-index: 1;
+}
+#banner::after{
+    position: absolute;
+    content: '';
+    z-index: -1;
+    background-color: black;
+    left:0;
+    top:0;
+    opacity: .66;
+    width:100%;
+    height:100%;
+}
+#banner .container{
+    height: 100%;
+}
+#banner .row{
+    
+    align-items: center;
+    height: 100%;
+    justify-content: center;
+}
+#banner img{
+    display: block;
+    margin: 50px auto;
+}
+
+#banner h3{
+    font-size: 30px;
+    font-family: 'Open Sans', sans-serif;
+}
+#banner h1{
+    font-size: 68px;
+    font-weight: 800;
+    letter-spacing: 30px;
+    font-family: 'Open Sans', sans-serif;
+    text-transform: uppercase;
+}
+#banner p{
+    font-size: 18px;
+    font-weight: 400;
+    font-family: 'Open Sans', sans-serif;
+
+}
+#banner a{
+    padding: 19px 42px;
+    background-color: var(--thirdColor);
+    color:var(--formColor);
+    font-size: 14px;
+    font-weight: 800;
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    border-radius: 10px;
+    transition: .4s;
+}
+#banner a:hover{
+    background-color: var(--secondaryColor);
+    color:red;
+    
+}
+/* Banner part ends */
+/* About part starts */
+#about{
+    padding: 98px 0;
+    background: var(--secondaryColor);
+}
+#about .section_info{
+    margin-bottom: 80px;
+}
+#about .section_info p{
+    width:875px;
+    margin: auto;
+}
+#about h2{
+    margin-bottom: 32px;
+}
+
+#about .about_item{
+    width: 25%;
+    text-align: center;
+    padding: 60px 36px;
+    border-right: 1px solid var(--secondaryColor);
+
+}
+#about .about_item:last-child{
+    border-right: 0px;
+}
+#about .about_item i{
+    color: var(--primaryColor);
+    font-size: 25px;
+}
+#about .about_item h4{
+    font-size: 16px;
+    color: var(--userinputColor);
+    font-weight: 800;
+    margin: 29px 0;
+}
+#about .about_item p{
+    color: var(--userinputColor);
+    font-size: 11px;
+
+}
+
+/* About part ends */
+/* Service Section Css Start */
+#service{
+    background-image: url(../img/MYFOLIO_service.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 74px 0 0 0;
+ }
+ #service .inner_container{
+    width: 50%;
+ }
+ 
+ #service .section_info{
+    text-align: left;
+ }
+ #service .service_item{
+    width: 50%;
+    padding: 25px 110px 25px 0;
+ }
+ #service .service_item i{
+    color: var(--primaryColor);
+    font-size: 25px;
+ }
+ #service .service_item h4{
+    font-size: 16px;
+    color:var(--userinputColor);
+    font-weight: 800;
+    padding: 29px 0;
+ }
+ #service .service_item p{
+    font-size: 11px;
+    color: var(--userinputColor);
+ }
+ /* Service Section Css ends */
+ /* work Section Css starts */
+ #my_work{
+    background: var(--secondaryColor);
+ }
+ 
+ #my_work .section_info h2{
+    padding-top: 110px;
+    
+ }
+
+ #my_work .section_info .work_p{
+    margin-bottom: 80px;
+ }
+ #my_work .section_info p{
+    width: 675px;
+    margin: auto;
+ }
+ #my_work .section_info .design{
+    margin-top: 32px;
+    margin-bottom: 30px;
+ }
+ #my_work .work_item{
+    width: 25%;
+    position: relative;
+ }
+ #my_work .work_item img{
+    width: 100%;
+    width: 100%;
+    display: block;
+ }
+ 
+ #my_work .work_item .overlay{
+    position: absolute;
+    left: 28px;
+    right: 28px;
+    top: 20px;
+    bottom: 20px;
+    background: rgba(2,145,139,0.85) ;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: .5s;
+ }
+ 
+ #my_work .work_item:hover .overlay{
+    opacity: 1;
+    visibility: visible;
+ }
+ /* //My Work Section Css End */
+ 
+ 
+ /* Contact Section Css Start */
+ #contact .section_info{
+    padding: 100px 0 80px ;
+    
+ }
+ 
+ #contact .section_info p{
+    width: 675px;
+    margin: auto;
+ }
+ #contact .section_info .design{
+    margin-top: 32px;
+    margin-bottom: 30px;
+ }
+ #contact .contact_form{
+    background-color: #111;
+    padding: 70px 0;
+ }
+ 
+ #contact .contact_form input,
+ #contact .contact_form textarea{
+    color: var(--userinputColor);
+    display: block;
+    margin: auto;
+    background: none;
+    border: none;
+    border-bottom: 1px solid var(--userinputColor);
+    padding:15px 20px;
+    margin-bottom: 50px;
+    font-size: 16px;
+    text-align: center;
+ }
+ #contact .contact_form .input_small{
+    width: 640px;
+ }
+ #contact .contact_form .input_large{
+    width: 916px;
+ }
+ #contact .contact_form textarea{
+    resize: none;
+    font-family: 'Open Sans', sans-serif;
+ }
+ #contact .contact_form button{
+       border: none;
+       font-size: 14px;
+       color: var(--formColor);
+       font-weight: 800;
+       padding: 15px 40px;
+       text-transform: uppercase;
+       transition: .5s;
+       background-color: var(--thirdColor);
+       display: block;
+       margin: auto;
+       cursor: pointer;
+       border-radius: 10px;
+ }
+ #contact .contact_form button:hover{
+    background-color: antiquewhite;
+    color: limegreen;
+ }
+ #contact .contact_form .pp{
+    position: relative;
+ }
+ #contact .contact_form .pp i{
+    cursor: pointer;
+    position: absolute;
+    top: 17px;
+    right: 570px;
+    color: var(--thirdColor);
+ }
+ /* //Contact Section Css End */
+ 
+ /* Footer Css Start */
+ footer{
+    background-color: #0a0a0b;
+    text-align: center;
+    color: var(--userinputColor);
+    font-size: 12px;
+    text-transform: uppercase;
+    padding: 15px;
+ }
+ /* //Footer Css End */
+ 
